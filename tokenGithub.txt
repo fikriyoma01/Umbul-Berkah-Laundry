@@ -1,0 +1,14 @@
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/hidayantoadi/testing.git/'
+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
+
+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
+
+
+testing
+456789
+Token :
+--14-04-2022    : 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
+--16-04-2022    : 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
+                  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

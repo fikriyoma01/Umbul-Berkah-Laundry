@@ -1,0 +1,83 @@
+https://www.ayongoding.com/install-laravel-linux-mint/
+https://www.ayongoding.com/install-composer-linux-mint/
+
+
+https://medium.com/angkringan/cara-clone-project-laravel-dari-git-bb2dd403dde3
+https://github.com/andes2912/laundry
+
+------------------------
+Cara Clone Project Laravel dari Git
+
+Sebenarnya ini adalah hal yang simpel. Tapi beberapa developer masih ada yang kebingungan saat setup Dev Environment di komputer lokal.
+Clone
+
+Hal pertama yang harus di lakukan adalah melakukan clone ke repositori target. Saya asumsikan disini sudah terinstall Git di mesin lokal, dan mempunyai akses (minimal Read) terhadap repositori target.
+
+Sebagai contoh, disini saya akan melakukan clone project di repositori public saya. Jadi, tentu saja siapa saja memiliki akses ke repo ini (akses Read).
+Git Repository di Github.com
+
+Dalam contoh di atas, saya akan melakukan clone dari repositori laravel-apitoken (Artikelnya bisa dibaca di sini). Bagi yang sudah melakukan setup SSH Key di git local + github nya bisa menggunakan metode SSH. Jika belum, gunakan metode HTTPS.
+
+Di sini, saya menggunakan terminal untuk menjalankan perintah Git Clone.
+
+*) git clone git@github.com:showcheap/laravel-apitoken.git
+
+Kurang lebih, outputnya akan seperti ini
+
+Cloning into 'laravel-apitoken'...
+remote: Counting objects: 128, done.
+remote: Total 128 (delta 0), reused 0 (delta 0), pack-reused 128
+Receiving objects: 100% (128/128), 165.48 KiB | 288.00 KiB/s, done.
+Resolving deltas: 100% (16/16), done.
+
+Install Depedency
+
+Depedensi adalah sekumpulan library yang dibutuhkan oleh aplikasi laravel kita, termasuk framework Laravel itu sendiri. List depedensi dapat dilihat pada berkas composer.json . Untuk menginstall semua depedensi, gunakan perintah 
+*) composer install 
+dan composer akan melakukan penelusuran depedensi apa saja yang dibutuhkan aplikasi, lalu mengunduhnya kedalam folder vendor . Sekali lagi, saya asumsikan disini sudah terinstall composer di mesin masing masing.
+
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Package operations: 59 installs, 0 updates, 0 removals
+  - Installing doctrine/inflector (v1.1.0): Downloading (100%)         
+  - Installing erusev/parsedown (1.6.1): Downloading (100%)         
+..............panjang sekali disini, dan butuh waktu lama.........
+
+Di tahap ini, biasanya prosesnya cukup lama. Tergantung koneksi internet, dan cache si composer.
+
+Setup Environment Variable
+
+Setelah composer install selesai, kemudian kita butuh membuat file .env di folder aplikasi kita. Namun, biasanya sudah ada file sampelnya. Kita cukup menyalin file itu saja (atau mengikuti README masing masing project).
+
+*) cp .env.example .env
+
+Kemudian isikan semua pengaturan yang perlu kamu masukkan, biasanya yang penting adalah pengaturan koneksi database.
+
+Tidak kalah penting, jika dalam sampel .env tadi masih belum memiliki APP_KEY bisa menyebabkan error seperti di bawah ini.
+Error App Key
+
+Solusinya, cukup menjalankan perintah ini di terminal
+
+*) php artisan key:generate
+
+Migrate & Seed
+
+Langkah selanjutnya adalah melakukan migrate & seed dengan menjalankan perintah berikut ini
+
+*) php artisan migrate --seed
+
+Output
+Run Local Dev Server
+
+Setelah semua sudah berhasil, langkah selanjutnya jalankan local server dengan perintah
+
+*) php artisan serve
+
+Done. Selamat mencoba 😁👏
+
+
+---
+test1
+test2
+test3
+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

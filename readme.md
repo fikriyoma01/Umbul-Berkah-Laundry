@@ -1,6 +1,10 @@
-## Keterangan Project
+# Umbul Berkah Laundry
 
-<h1>Project Laravel Mata Kuliah Pemrograman Web Praktikum S1 Sistem Informasi UNAIR</h1>
-<p>Kelas I1 : Kelompok 8</p>
-<p>Anggota 1 : Fikri Yoma Rosyidan, NIM : 082011633076</p>
-<p>Anggota 2 : Aristo Riza Muhammad, NIM : 082011633077</p>
+Dalam Project ini, kami memiliki stakeholder berupa usaha laundry bernama “Umbul Berkah”. Di sini kami akan membuat website yang dapat membantu pemilik, karyawan laundry maupun customer dalam bertransaksi jasa laundry. Website ini nantinya akan dapat menyimpan data profil akun (admin, karyawan, customer), menambah karyawan, mencatat pemesanan laundry pada bagian karyawan, menambah customer pada bagian karyawan, dan memantau riwayat dan status laundry pada bagian customer.
+
+Dokumentasi lengkap proyek: [sini]()
+
+## Tampilan project
+![Dashboard]()
+![Landing_Page]()
+![Transaksi]()
